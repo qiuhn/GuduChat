@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.gudu.wall.domain">
+	<class name="com.gudu.wall.domain.domain.Topic" table="t_wall_topic">
+		<id name="id" length="32" type="string">
+			<generator class="uuid"/>
+		</id>
+		<property name="content" type="text"/>
+		<property name="createDate"/>
+		<property name="ip" length="64"/>
+		<property name="mac" length="64"/>
+		<property name="title" length="255"/>
+		<property name="schoolId"/>
+		<property name="imgs"/>
+		<property name="praiseCount"/>
+		<property name="status" length="1"/>
+		<property name="replyCount"/>
+		<property name="display" />
+		<property name="latestUpdateTime" />
+		<!--<set name="praiseUserIds" table="t_wall_topic_praise">
+			<key column="topic_id"></key>
+			<element column="userid" type="string"/>
+		</set>-->
+		<property name="meLike" />
+	</class>
+</hibernate-mapping>
+
+
+

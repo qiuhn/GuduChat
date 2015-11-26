@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.gudu.wall.domain">
+	<class name="com.gudu.wall.domain.domain.Reply" table="t_wall_reply">
+		<id name="id" length="32">
+			<generator class="uuid"/>
+		</id>
+		<property name="content"/>
+		<property name="createDate"/>
+		<property name="index"/>
+		<property name="imgs"/>
+		<property name="topicId"/>
+		<property name="userId"/>
+		<property name="status" length="1"/>
+	</class>
+</hibernate-mapping>
+
+
+

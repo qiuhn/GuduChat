@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.gudu.user.domain">
+	<class name="User" table="t_user">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="username" length="50" />
+		<property name="pwd"/>
+		<property name="nickname" length="50" />
+		<property name="realName" length="50" />
+		<property name="sex" length="1" />
+		<property name="registerDate" />
+		<property name="placeCityId" />
+		<property name="status" length="1" />
+		<property name="homeCityId" />
+		<property name="schoolId" />
+		<property name="departId" />
+		<property name="degree" length="1" />
+		<property name="schoolDate" length="4" />
+		<property name="avatar" length="40" />
+		<property name="highAvatar" length="4" />
+	</class>
+</hibernate-mapping>
+
+
+
