@@ -1,6 +1,7 @@
 package com.gudu.account.api;
 
 
+import com.gudu.account.pojo.UserPojo;
 import com.gudu.core.response.Response;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +20,12 @@ public interface AccountApi {
     public Response login(@PathVariable("username") String username, @PathVariable("pwd") String pwd, @PathVariable("mobieNo") String mobieNo);
 
 
-    @RequestMapping(value = "login")
+    @RequestMapping(value = "/login")
     public String login();
 
-
+    @RequestMapping(value = "/test")
+    @ResponseBody
+    public UserPojo test();
 }
 
 

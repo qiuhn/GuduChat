@@ -27,8 +27,16 @@ public class WallApiImpl implements IWallApi{
     public Response addTopic(@RequestBody AddTopicPojo pojo) {
         Response response = new Response();
         try{
-            String id =  wallService.addTopic(pojo);
-            response.setObj(id);
+            for (int i=0;i<100;i++){
+                AddTopicPojo pojo1 = new AddTopicPojo();
+                pojo1.setSchoolId(0);
+                pojo1.setTitle("test" + i);
+                pojo1.setUserId(0);
+                pojo1.setContent("content"+i);
+                String id =  wallService.addTopic(pojo);
+            }
+
+            response.setObj(0);
         }catch (Exception e){
             response.setCode(0);
             e.printStackTrace();
@@ -41,6 +49,7 @@ public class WallApiImpl implements IWallApi{
         Response response = new Response();
         try {
             List<Topic> topics = wallService.queryTopics(userid,time,timeCount,size);
+            System.out.println("topics:"+topics);
             response.setObj(topics);
         }catch (Exception e){
             response.setCode(0);

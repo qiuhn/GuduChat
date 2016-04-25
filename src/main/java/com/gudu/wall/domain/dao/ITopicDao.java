@@ -1,6 +1,7 @@
 package com.gudu.wall.domain.dao;
 
 import com.gudu.base.IBaseDao;
+import com.gudu.wall.domain.domain.Reply;
 import com.gudu.wall.domain.domain.Topic;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * Created by qiuhn on 2015/10/18.
  */
-public interface ITopicDao extends IBaseDao{
+public interface ITopicDao extends IBaseDao<Topic>{
     /**
      * 查询对话列表
      * @param time

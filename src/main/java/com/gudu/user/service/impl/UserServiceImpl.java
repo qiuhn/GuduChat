@@ -35,7 +35,7 @@ public class UserServiceImpl implements IUserService{
 
 		Object obj = userDao.uniqueResult(" from User u where u.username=? ", uesrname);
 		if(obj == null){
-//			throw new AccountException(AccountException.CODE_USER_NOT_EXIST,AccountException.MESSAGE_USER_NOT_EXIST);
+			throw new AccountException(AccountException.CODE_USER_NOT_EXIST,AccountException.MESSAGE_USER_NOT_EXIST);
 		}
 		User user = (User) obj;
 		if(!user.getPwd().equals(pwd)){

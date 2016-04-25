@@ -18,7 +18,6 @@ import java.util.List;
  * Created by qiuhn on 2015/10/18.
  */
 @Service("wallService")
-
 public class WallServiceImpl implements IWallService {
 
     @Inject

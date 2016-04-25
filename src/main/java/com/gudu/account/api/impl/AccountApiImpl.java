@@ -34,4 +34,13 @@ public class AccountApiImpl implements AccountApi {
         System.out.println("login................");
         return "index";
     }
+
+    @Override
+    public UserPojo test() {
+        UserPojo pojo = new UserPojo();
+        pojo.setUsername("aaa");
+        pojo.setAvatar("aaa");
+        pojo.setId(1);
+        return pojo;
+    }
 }
